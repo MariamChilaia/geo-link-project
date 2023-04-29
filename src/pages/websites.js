@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from '../src/Link';
+import Link from '../../src/Link';
 import { styled } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Hidden from '@mui/material/Hidden';
 
-import CallToAction from '../src/ui/CallToAction';
+import CallToAction from '../../src/ui/CallToAction';
 
 const useStyles = styled((theme) => ({
   heading: {

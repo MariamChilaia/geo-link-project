@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Lottie from 'react-lottie';
-import Link from '../src/Link';
+import Link from '../../src/Link';
 import { styled } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
@@ -10,9 +9,9 @@ import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Hidden from '@mui/material/Hidden';
 
-import integrationAnimation from '../src/animations/integrationAnimation/data.json';
+import integrationAnimation from '../../src/animations/integrationAnimation/data.json';
 
-import CallToAction from '../src/ui/CallToAction';
+import CallToAction from '../../src/ui/CallToAction';
 
 const useStyles = styled((theme) => ({
   heading: {
@@ -187,16 +186,7 @@ export default function MobileApps(props) {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item md>
-          <Lottie
-            options={defaultOptions}
-            isStopped={true}
-            style={{
-              maxWidth: matchesMD ? '15em' : '20em',
-              height: matchesMD ? '20em' : undefined,
-            }}
-          />
-        </Grid>
+        <Grid item md></Grid>
         <Grid item container direction='column' md>
           <Grid item>
             <Typography
