@@ -1,0 +1,36 @@
+{
+  "name": "geolink-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.1",
+    "@mui/styled-engine-sc": "^5.12.0",
+    "@mui/styles": "^5.12.0",
+    "autoprefixer": "10.4.14",
+    "axios": "^0.19.0",
+    "clsx": "latest",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "fileloader": "^2.0.0",
+    "fontfaceobserver": "^2.1.0",
+    "fs-extra": "^8.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "next": "13.3.0",
+    "postcss": "8.4.23",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-lazy-load-image-component": "^1.4.3",
+    "styled-components": "^5.3.9",
+    "tailwindcss": "3.3.1"
+  }
+}
