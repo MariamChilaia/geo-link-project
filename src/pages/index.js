@@ -213,7 +213,6 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
       <Grid item>
-        {' '}
         {/*-----Custom Software Block-----*/}
         <Grid
           container
@@ -423,7 +422,9 @@ export default function LandingPage(props) {
                 <Typography variant='h1' style={{ color: 'white' }}>
                   About Us
                 </Typography>
-                <Typography variant='subtitle2'>Let's get personal.</Typography>
+                <Typography variant='subtitle2'>
+                  Let&apos;s get personal.
+                </Typography>
                 <Grid item>
                   <Button
                     component={Link}

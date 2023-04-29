@@ -130,7 +130,7 @@ export default function About(props) {
                 align={matchesMD ? 'center' : undefined}
                 paragraph
               >
-                It all started with one question: Why aren’t all businesses
+                It all started with one question: Why aren&apos;t all businesses
                 using available technology? There are many different answers to
                 that question: economic barriers, social barriers, educational
                 barriers, and sometimes institutional barriers.
