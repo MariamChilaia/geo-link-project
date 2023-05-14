@@ -98,38 +98,6 @@ const useStyles = styled((theme) => ({
       padding: 5,
     },
   },
-  revolutionBackground: {
-    backgroundImage: `url("/assets/repeatingBackground.svg")`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    height: '100%',
-    width: '100%',
-  },
-  revolutionCard: {
-    position: 'absolute',
-    boxShadow: theme.shadows[10],
-    borderRadius: 15,
-    padding: '10em',
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: '8em',
-      paddingBottom: '8em',
-      paddingLeft: 0,
-      paddingRight: 0,
-      borderRadius: 0,
-      width: '100%',
-    },
-  },
-  infoBackground: {
-    position: 'absolute',
-    zIndex: -1,
-    backgroundImage: `url("/assets/infoBackground.svg")`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    height: '100%',
-    width: '100%',
-  },
 }));
 
 export default function LandingPage(props) {
@@ -217,7 +185,7 @@ export default function LandingPage(props) {
             }}
           >
             <Typography variant='h4'>Quality Assurance</Typography>
-            <Typography variant='subtitle1' className={classes.subtitle}>
+            <Typography variant='subtitle1'>
               Save Energy. Save Time. Save Money.
             </Typography>
             <Typography variant='subtitle1'>
@@ -235,7 +203,6 @@ export default function LandingPage(props) {
       </Grid>
       <Grid item>
         {' '}
-        {/*-----iOS/Android Block-----*/}
         <ServiceContainerGrid
           container
           direction='row'
