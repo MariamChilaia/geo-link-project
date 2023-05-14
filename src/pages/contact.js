@@ -24,8 +24,8 @@ export default function Contact(props) {
         <Grid item xs={8}>
           <Typography mt={1} fontSize={'23px'}>
             We appreciate your decision to join the GeoLink team, that links you
-            to the very positive and productive future! Just send us answers in
-            this{' '}
+            to the very positive and productive future! Just send us this very
+            short{' '}
             <Link
               target='_blank'
               underline='true'
@@ -33,8 +33,7 @@ export default function Contact(props) {
               href='https://forms.gle/RaxzxAFsyEKxeBkK8'
             >
               Google Form
-            </Link>{' '}
-            with very short info and we will meet you online very soon.
+            </Link>
           </Typography>
           <Typography mt={3} fontSize={'23px'}>
             email: jobs.geolink@gmail.com
