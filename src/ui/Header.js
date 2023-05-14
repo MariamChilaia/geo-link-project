@@ -36,6 +36,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 }));
 const StyledTabs = styled(Tabs)(({ theme }) => ({
   marginLeft: 'auto',
+  marginRight: '10px',
 }));
 const StyledButtonLogo = styled(Button)(({ theme }) => ({
   padding: 0,
@@ -85,6 +86,9 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   fontSize: '1rem',
   minWidth: 10,
   marginLeft: '25px',
+  '&.Mui-selected': {
+    color: 'white',
+  },
 }));
 const MenuStyledPaper = styled(Paper)(({ theme }) => ({
   root: {
@@ -116,15 +120,9 @@ export default function Header(props) {
 
   const routes = [
     { name: 'Home', link: '/', activeIndex: 0 },
-    {
-      name: 'Services',
-      link: '/services',
-      activeIndex: 1,
-      ariaOwns: anchorEl ? 'simple-menu' : undefined,
-      mouseOver: (event) => handleClick(event),
-    },
-    { name: 'About Us', link: '/about', activeIndex: 3 },
-    { name: 'Contact Us', link: '/contact', activeIndex: 4 },
+
+    { name: 'About Us', link: '/about', activeIndex: 1 },
+    { name: 'Contact Us', link: '/contact', activeIndex: 2 },
   ];
 
   function checkPath() {
@@ -145,7 +143,6 @@ export default function Header(props) {
           if (props.value !== false) {
             props.setValue(false);
           }
-
           break;
         default:
           break;
@@ -174,7 +171,7 @@ export default function Header(props) {
       <StyledTabs
         value={props.value}
         onChange={handleChange}
-        indicatorColor='primary'
+        indicatorColor='secondary'
       >
         {routes.map((route, index) => (
           <StyledTab
@@ -196,7 +193,7 @@ export default function Header(props) {
     <React.Fragment>
       <ElevationScroll>
         <StyledAppBar position='fixed'>
-          <Toolbar disableGutters>
+          <Toolbar disableGutters padding={2}>
             <StyledButtonLogo
               component={Link}
               href='/'

@@ -59,7 +59,7 @@ export default function MobileApps(props) {
         />
         <meta
           property='og:title'
-          content='Bringing West Coast Technology to the Midwest | iOS/Android App Development'
+          content='Bringing South Causasian Technology to the Western Tech World | iOS/Android App Development'
           key='og:title'
         />
         <meta property='og:url' key='og:url' content='arc.com/mobileapps' />

@@ -9,8 +9,8 @@ import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import ButtonArrow from '../../src/ui/ButtonArrow';
-const ServiceContainerGrid = styled(Grid)(({ theme }) => ({
-  marginTop: '10em',
+export const ServiceContainerGrid = styled(Grid)(({ theme }) => ({
+  marginTop: '7em',
   [theme.breakpoints.down('sm')]: {
     padding: 25,
   },
@@ -62,7 +62,7 @@ export default function Services(props) {
         />
         <meta
           property='og:title'
-          content='Bringing West Coast Technology to the Midwest | Services'
+          content='Bringing South Causasian Technology to the Western Tech World | Services'
           key='og:title'
         />
         <meta property='og:url' key='og:url' content='arc.com/services' />
@@ -72,7 +72,7 @@ export default function Services(props) {
         item
         style={{
           marginLeft: matchesSM ? 0 : '5em',
-          marginTop: matchesSM ? '1em' : '2em',
+          marginTop: matchesSM ? '1em' : '80px',
         }}
       >
         <Typography
@@ -107,22 +107,6 @@ export default function Services(props) {
               Integrate your web experience or create a standalone app
               {matchesSM ? null : <br />}with either mobile platform.
             </Typography>
-            <LearnButton
-              component={Link}
-              href='/mobileapps'
-              variant='outlined'
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(2);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </LearnButton>
           </Grid>
           <Grid item style={{ marginRight: matchesSM ? 0 : '5em' }}>
             <img
@@ -149,30 +133,14 @@ export default function Services(props) {
               textAlign: matchesSM ? 'center' : undefined,
             }}
           >
-            <Typography variant='h4'>Custom Software Development</Typography>
+            <Typography variant='h4'>Quality Assurance</Typography>
             <Typography variant='subtitle1' className={classes.subtitle}>
               Save Energy. Save Time. Save Money.
             </Typography>
             <Typography variant='subtitle1'>
-              Complete digital solutions, from investigation to{' '}
-              <span className={classes.specialText}>celebration.</span>
+              Check out the application with either a manual or an automated
+              tester
             </Typography>
-            <LearnButton
-              component={Link}
-              href='/customsoftware'
-              variant='outlined'
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(1);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </LearnButton>
           </Grid>
           <Grid item>
             <img
@@ -207,23 +175,6 @@ export default function Services(props) {
             <Typography variant='subtitle1'>
               Optimized for Search Engines, built for speed.
             </Typography>
-            <Button
-              component={Link}
-              href='/websites'
-              variant='outlined'
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(3);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
           </Grid>
           <Grid item style={{ marginRight: matchesSM ? 0 : '5em' }}>
             <img

@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-
+import { ServiceContainerGrid } from './services';
 import CallToAction from '../../src/ui/CallToAction';
 
 import animationData from '../../src/animations/landinganimation/data';
@@ -20,7 +20,12 @@ import {
   LazyLoadImage,
   LazyLoadComponent,
 } from 'react-lazy-load-image-component';
-
+const StyledLazyLoadImage = styled(LazyLoadImage)(({ theme }) => ({
+  marginLeft: '2em',
+  [theme.breakpoints.down('xs')]: {
+    marginLeft: 0,
+  },
+}));
 const useStyles = styled((theme) => ({
   animation: {
     maxWidth: '50em',
@@ -83,12 +88,7 @@ const useStyles = styled((theme) => ({
   subtitle: {
     marginBottom: '1em',
   },
-  icon: {
-    marginLeft: '2em',
-    [theme.breakpoints.down('xs')]: {
-      marginLeft: 0,
-    },
-  },
+  icon: {},
   serviceContainer: {
     marginTop: '12em',
     [theme.breakpoints.down('sm')]: {
@@ -160,7 +160,7 @@ export default function LandingPage(props) {
         />
         <meta
           property='og:title'
-          content='Bringing West Coast Technology to the Midwest | GeoLink'
+          content='Bringing South Causasian Technology to the Western Tech World | GeoLink'
           key='og:title'
         />
         <meta property='og:url' key='og:url' content='arc.com' />
@@ -175,29 +175,22 @@ export default function LandingPage(props) {
           alignItems='center'
           direction='row'
         >
-          <Grid sm item className={classes.heroTextContainer}>
+          <Grid sm item>
             <Typography variant='h1' align='center' mt={10}>
-              Bringing West Coast Technology
+              Bringing South Causasian Technology
               <br />
-              to the Midwest
+              to the Western Tech World
             </Typography>
-            <Grid
-              container
-              justifyContent='center'
-              className={classes.buttonContainer}
-            >
-              <Grid item></Grid>
+            <Grid container justifyContent='center'>
               <Grid item>
                 <Button
                   component={Link}
-                  href='/revolution'
+                  href='/contact'
                   className={classes.learnButtonHero}
                   variant='outlined'
                   onClick={() => props.setValue(2)}
                 >
-                  <span style={{ marginRight: 10, marginTop: 7 }}>
-                    Learn More
-                  </span>
+                  Learn More
                   <ButtonArrow
                     width={15}
                     height={15}
@@ -207,18 +200,14 @@ export default function LandingPage(props) {
               </Grid>
             </Grid>
           </Grid>
-          <Grid sm item className={classes.animation}>
-            {/* <Lottie options={defaultOptions} height={'100%'} width={'100%'} /> */}
-          </Grid>
         </Grid>
       </Grid>
       <Grid item>
         {/*-----Custom Software Block-----*/}
-        <Grid
+        <ServiceContainerGrid
           container
           direction='row'
           justifyContent={matchesSM ? 'center' : undefined}
-          className={classes.serviceContainer}
         >
           <Grid
             item
@@ -227,32 +216,30 @@ export default function LandingPage(props) {
               textAlign: matchesSM ? 'center' : undefined,
             }}
           >
-            <Typography variant='h4'>Custom Software Development</Typography>
+            <Typography variant='h4'>Quality Assurance</Typography>
             <Typography variant='subtitle1' className={classes.subtitle}>
               Save Energy. Save Time. Save Money.
             </Typography>
             <Typography variant='subtitle1'>
-              Complete digital solutions, from investigation to{' '}
-              <span className={classes.specialText}>celebration.</span>
+              Check out the application with either a manual or an automated
+              tester
             </Typography>
           </Grid>
           <Grid item>
-            <LazyLoadImage
-              className={classes.icon}
+            <StyledLazyLoadImage
               alt='custom software icon'
               src='/assets/customSoftware.svg'
             />
           </Grid>
-        </Grid>
+        </ServiceContainerGrid>
       </Grid>
       <Grid item>
         {' '}
         {/*-----iOS/Android Block-----*/}
-        <Grid
+        <ServiceContainerGrid
           container
           direction='row'
           justifyContent={matchesSM ? 'center' : 'flex-end'}
-          className={classes.serviceContainer}
         >
           <Grid
             item
@@ -268,41 +255,22 @@ export default function LandingPage(props) {
               Integrate your web experience or create a standalone app
               {matchesSM ? null : <br />}with either mobile platform.
             </Typography>
-            <Button
-              component={Link}
-              href='/mobileapps'
-              variant='outlined'
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(2);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
           </Grid>
           <Grid item style={{ marginRight: matchesSM ? 0 : '5em' }}>
-            <LazyLoadImage
-              className={classes.icon}
+            <StyledLazyLoadImage
               alt='mobile phone icon'
               src='/assets/mobileIcon.svg'
             />
           </Grid>
-        </Grid>
+        </ServiceContainerGrid>
       </Grid>
       <Grid item>
         {' '}
         {/*-----Websites Block-----*/}
-        <Grid
+        <ServiceContainerGrid
           container
           direction='row'
           justifyContent={matchesSM ? 'center' : undefined}
-          className={classes.serviceContainer}
         >
           <Grid
             item
@@ -318,172 +286,14 @@ export default function LandingPage(props) {
             <Typography variant='subtitle1'>
               Optimized for Search Engines,{matchesXS && <br />}built for speed.
             </Typography>
-            <Button
-              component={Link}
-              href='/websites'
-              variant='outlined'
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(3);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
           </Grid>
-          <Grid item>
-            <LazyLoadImage
-              className={classes.icon}
+          <Grid item marginBottom={12}>
+            <StyledLazyLoadImage
               alt='website icon'
               src='/assets/websiteIcon.svg'
             />
           </Grid>
-        </Grid>
-      </Grid>
-      <Grid item>
-        {/*-----The Revolution Block-----*/}
-        <Grid
-          container
-          style={{ height: '100em', marginTop: '12em' }}
-          alignItems='center'
-          justifyContent='center'
-        >
-          <Card className={classes.revolutionCard}>
-            <CardContent>
-              <Grid
-                container
-                direction='column'
-                style={{ textAlign: 'center' }}
-              >
-                <Grid item>
-                  <Typography variant='h3' gutterBottom>
-                    The Revolution
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant='subtitle1'>
-                    Visionary insights coupled with cutting-edge technology is a
-                    recipe for revolution.
-                  </Typography>
-                  <Button
-                    component={Link}
-                    href='/revolution'
-                    className={classes.learnButtonHero}
-                    variant='outlined'
-                    onClick={() => props.setValue(2)}
-                  >
-                    <span style={{ marginRight: 10 }}>Learn More</span>
-                    <ButtonArrow
-                      width={15}
-                      height={15}
-                      fill={theme.palette.common.blue}
-                    />
-                  </Button>
-                </Grid>
-              </Grid>
-            </CardContent>
-          </Card>
-          <LazyLoadComponent threshold={850}>
-            <div className={classes.revolutionBackground} />
-          </LazyLoadComponent>
-        </Grid>
-      </Grid>
-      <Grid item>
-        {/*-----Information Block-----*/}
-        <Grid
-          container
-          style={{ height: '77em' }}
-          alignItems='center'
-          direction='row'
-        >
-          <Grid
-            item
-            container
-            style={{
-              textAlign: matchesXS ? 'center' : 'inherit',
-            }}
-            direction={matchesXS ? 'column' : 'row'}
-          >
-            <Grid
-              item
-              sm
-              style={{ marginLeft: matchesXS ? 0 : matchesSM ? '2em' : '5em' }}
-            >
-              <Grid
-                container
-                style={{ marginBottom: matchesXS ? '10em' : 0 }}
-                direction='column'
-              >
-                <Typography variant='h1' style={{ color: 'white' }}>
-                  About Us
-                </Typography>
-                <Typography variant='subtitle2'>
-                  Let&apos;s get personal.
-                </Typography>
-                <Grid item>
-                  <Button
-                    component={Link}
-                    href='/about'
-                    variant='outlined'
-                    style={{ color: 'white', borderColor: 'white' }}
-                    className={classes.learnButton}
-                    onClick={() => props.setValue(3)}
-                  >
-                    <span style={{ marginRight: 10 }}>Learn More</span>
-                    <ButtonArrow width={10} height={10} fill='white' />
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid
-              item
-              sm
-              style={{
-                marginRight: matchesXS ? 0 : matchesSM ? '2em' : '5em',
-                textAlign: matchesXS ? 'center' : 'right',
-              }}
-            >
-              <Grid container direction='column'>
-                <Typography variant='h1' style={{ color: 'white' }}>
-                  Contact Us
-                </Typography>
-                <Typography variant='subtitle2'>
-                  Say hello!{' '}
-                  <span role='img' aria-label='waving hand'>
-                    👋🏻
-                  </span>
-                </Typography>
-                <Grid item>
-                  <Button
-                    component={Link}
-                    href='/contact'
-                    variant='outlined'
-                    style={{ color: 'white', borderColor: 'white' }}
-                    className={classes.learnButton}
-                    onClick={() => props.setValue(4)}
-                  >
-                    <span style={{ marginRight: 10 }}>Learn More</span>
-                    <ButtonArrow width={10} height={10} fill='white' />
-                  </Button>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <LazyLoadComponent threshold={700}>
-            <div className={classes.infoBackground} />
-          </LazyLoadComponent>
-        </Grid>
-      </Grid>
-      <Grid item>
-        <LazyLoadComponent threshold={700}>
-          {/*-----Call To Action Block-----*/}
-          <CallToAction setValue={props.setValue} />
-        </LazyLoadComponent>
+        </ServiceContainerGrid>
       </Grid>
     </Grid>
   );

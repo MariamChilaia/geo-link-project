@@ -91,7 +91,7 @@ export default function CustomSoftware(props) {
         />
         <meta
           property='og:title'
-          content='Bringing West Coast Technology to the Midwest | Custom Software Development'
+          content='Bringing South Causasian Technology to the Western Tech World | Custom Software Development'
           key='og:title'
         />
         <meta property='og:url' key='og:url' content='arc.com/customsoftware' />
@@ -110,16 +110,7 @@ export default function CustomSoftware(props) {
             item
             className={classes.arrowContainer}
             style={{ marginRight: '1em', marginLeft: '-3.5em' }}
-          >
-            <IconButton
-              style={{ backgroundColor: 'transparent' }}
-              component={Link}
-              href='/services'
-              onClick={() => props.setSelectedIndex(0)}
-            >
-              <img src='/assets/backArrow.svg' alt='Back to Services Page' />
-            </IconButton>
-          </Grid>
+          ></Grid>
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
@@ -174,21 +165,6 @@ export default function CustomSoftware(props) {
             </Typography>
           </Grid>
         </Grid>
-        <Hidden mdDown>
-          <Grid item className={classes.arrowContainer}>
-            <IconButton
-              style={{ backgroundColor: 'transparent' }}
-              component={Link}
-              href='/mobileapps'
-              onClick={() => props.setSelectedIndex(2)}
-            >
-              <img
-                src='/assets/forwardArrow.svg'
-                alt='Forward to iOS/Android App Development Page'
-              />
-            </IconButton>
-          </Grid>
-        </Hidden>
       </Grid>
       <Grid
         item

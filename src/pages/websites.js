@@ -49,7 +49,7 @@ export default function Websites(props) {
         />
         <meta
           property='og:title'
-          content='Bringing West Coast Technology to the Midwest | Websites'
+          content='Bringing South Causasian Technology to the Western Tech World | Websites'
           key='og:title'
         />
         <meta property='og:url' key='og:url' content='arc.com/websites' />
