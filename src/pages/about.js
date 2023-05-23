@@ -57,17 +57,17 @@ export default function About(props) {
         <link rel='canonical' key='canonical' href='arc.com/about' />
       </Head>
       <RowContainerGrid item style={{ marginTop: matchesMD ? '1em' : '80px' }}>
-        <Typography align={matchesMD ? 'center' : undefined} variant='h1'>
+        <Typography align={matchesMD ? 'left' : undefined} variant='h1'>
           About Us
         </Typography>
       </RowContainerGrid>
       <RowContainerGrid
         item
         container
-        justifyContent='center'
+        justifyContent='left'
         style={{ marginTop: '3em' }}
       >
-        <MissionStatementTypography variant='h4' align='center'>
+        <MissionStatementTypography variant='h4' align='left'>
           Whether it be person to person, business to consumer, or an individual
           to their interests, technology is meant to bring us closer to what we
           care about in the best way possible. GeoLink will use that principle
@@ -89,24 +89,24 @@ export default function About(props) {
         item
         container
         direction='column'
-        alignItems='center'
+        alignItems='left'
         style={{ marginBottom: '5em' }}
       >
         <Grid item>
-          <Typography align='center' variant='h4' gutterBottom>
+          <Typography align='left' variant='h4' gutterBottom>
             CEO
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='body1' paragraph align='center'>
+          <Typography variant='body1' paragraph align='left'>
             Lela Maisuradze, Founder
           </Typography>
-          <Typography variant='body1' paragraph align='center'></Typography>
+          <Typography variant='body1' paragraph align='left'></Typography>
         </Grid>
-        <Grid item container justifyContent={'center'}>
+        <Grid item container justifyContent={'left'}>
           <Hidden mdDown>
-            <Grid item lg style={{ maxWidth: '85em', padding: '1.35em' }}>
-              <Typography variant='h6' align='center' paragraph>
+            <Grid item lg style={{ maxWidth: '85em' }}>
+              <Typography variant='h6' align='left' paragraph>
                 Lela Maisuradze is a founder and director of GeoLink, the
                 mediation company for international job placements in the
                 digital world. She has been working as an Employment Consultant
@@ -133,19 +133,19 @@ export default function About(props) {
         item
         container
         direction='column'
-        alignItems='center'
+        alignItems='left'
         style={{ marginBottom: '3em' }}
       >
         <Grid item>
-          <Typography align='center' variant='h4' gutterBottom>
+          <Typography align='left' variant='h4' gutterBottom>
             History
           </Typography>
         </Grid>
 
-        <Grid item container justifyContent={'center'}>
+        <Grid item container justifyContent={'left'}>
           <Hidden mdDown>
-            <Grid item lg style={{ maxWidth: '85em', padding: '1.35em' }}>
-              <Typography variant='h6' align='center' paragraph>
+            <Grid item lg style={{ maxWidth: '85em' }}>
+              <Typography variant='h6' align='left' paragraph>
                 GeoLink is the child company of GIJ (Gesellschaft fur
                 International Jugendarbeit), the employment organization with 25
                 years of history, related to the cooperation with German
